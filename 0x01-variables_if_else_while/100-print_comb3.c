@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <timr.h>
 /**
  * main - Prints all possible different combinations of two digits
  * Return: 0
@@ -7,15 +9,15 @@ int main(void)
 {
 int a;
 int b;
-for (a = 49; a < 57; a++)
+for (a = '0'; a < '9'; a++)
 {
-for (b = a + 1; b <= 57; b++)
+for (b = a + 1; b <= '9'; b++)
 {
 if (b != a)
 {
 putchar(a);
 putchar(b);
-if (a == 56 && b == 57)
+if (a == '8' && b == '9')
 continue;
 putchar(',');
 putchar(' ');
